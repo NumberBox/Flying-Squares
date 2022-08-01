@@ -1,0 +1,632 @@
+.glav_grid {
+    z-index: 499;
+    width: 90%;
+    height: 90%;  
+    position: absolute;   
+    left: 5%;
+    top: 5%;
+/*    background-color: aquamarine;  */
+    perspective: 50px;
+    perspective-origin: 50% 50%;
+        
+/*
+    animation: anim;
+    animation-timing-function: linear;
+    animation-duration: 6s;  
+    animation-iteration-count: i;
+*/
+}
+.scene_back{
+    width: 50%;
+    height: 50%;  
+    position: absolute;   
+    left: 25%;
+    top: 25%;
+    background-color: white;  
+/*    border: 5px solid black;*/
+    transform: translateZ(-400px);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+    animation: end_anim;
+    animation-play-state: paused;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;  
+    animation-fill-mode: forwards;
+    
+    
+    
+/*
+    background-image: url(img/1.png);   
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 650px 320px;
+*/
+    
+}
+@keyframes end_anim {
+    0%{
+        transform: translateZ(-400px); 
+    }   
+    100%{
+        transform: translateZ(23px); 
+    }
+}
+
+.glav_scene{
+    width: 100%;
+    height: 100%; 
+    position: absolute;
+    transform-style: preserve-3d;
+}
+.scene_front{
+    width: 50%;
+    height: 50%;  
+    position: absolute;   
+    left: 25%;
+    top: 25%;
+    transform: translateZ(20px);
+    opacity: 50%;
+}
+.wall_front{
+/*
+    width: 50%;
+    height: 5px;  
+    position: absolute;   
+    left: 25%;
+    bottom: 25%;
+    background-color: cadetblue; 
+    transform: translateZ(20px) rotateX(90deg);
+*/
+    
+}
+
+.scene_right{
+    width: 250%;
+    height: 50%;  
+    position: absolute;   
+    right: 25%;
+    top: 25%;
+    background-color: brown;  
+    transform: translateX(50%) rotateY(-90deg);
+    opacity: 100%;  
+    background-image: url(img/15.png);   
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 170px 345px;/* 870 110*/
+    
+/*
+          animation: anim_wall;
+    animation-timing-function: linear;
+    animation-duration: 5s;  
+    animation-iteration-count: infinite;
+*/
+}
+*{
+    box-sizing: border-box;
+}
+.scene_top{  
+    width: 50%;
+    height: 200%;  
+    position: absolute;   
+    left: 25%;
+    top: 25%;
+    background-color: deepskyblue;  
+    
+    transform: translateY(-50%) rotateX(-90deg);
+    background-image: url(img/15.png);   
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 750px 165px;/* 100 865*/ 
+
+/*
+              animation: anim_wall_top;
+    animation-timing-function: linear;
+    animation-duration: 5s;  
+    animation-iteration-count: infinite;
+*/
+
+}
+.p_class{
+    font-size: 2.5em;
+    margin: 0;
+    text-align: center;
+    user-select: none;
+}
+.p2_class{
+    font-size: 1.5em;
+    margin: 0;
+    text-align: center;
+    user-select: none;
+}
+.a_class{
+    font-size: 1em;
+    padding-bottom: 1px;
+    margin: 0;
+    text-align: center;
+    border: 3px solid black;
+    margin-top: 5px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    background-color: white;
+    color: black; 
+    outline: none;
+    transition: background-color 0.5s;
+    text-decoration: none;
+}
+.a_class:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.scene_bottom{
+    width: 50%;
+    height: 200%;  
+    position: absolute;   
+    left: 25%;
+    bottom: 25%;
+    background-color: yellow;  
+    transform: translateY(50%) rotateX(-90deg);
+    opacity: 100%;   
+     background-image: url(img/15.png);  
+    
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 720px 165px;
+
+/*
+    
+          animation: anim_wall_top;
+    animation-timing-function: linear;
+    animation-duration: 5s;  
+    animation-iteration-count: infinite;
+*/
+
+}
+.scene_game_over{
+    display: none;
+}
+.total_click{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 6%;
+    height: 0.5%;
+    left: 47%;
+    bottom: 43%;
+    transform: translateY(50%) translateZ(43px);
+    font-size: 3px;
+    color: white;
+    user-select: none;
+}
+.scene_left{
+    width: 250%;
+    height: 50%;  
+    position: absolute;   
+    left: 25%;
+    top: 25%;
+    background-color: violet;
+    transform: translateX(-50%) rotateY(90deg);
+    background-image: url(img/15.png);   
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 170px 345px;
+
+
+/*
+      animation: anim_wall;
+    animation-timing-function: linear;
+    animation-duration: 5s;  
+    animation-iteration-count: infinite;
+    
+*/
+    
+ 
+}
+
+
+
+@keyframes anim_wall {
+    0%{
+        background-size: 170px 345px;
+    }  
+    50%{
+        background-size: 10px 10px;
+    }   
+    100%{
+        background-size: 170px 345px;
+    }
+}
+@keyframes anim_wall_top {
+    0%{
+        background-size: 720px 160px;
+    }  
+    50%{
+        background-size: 10px 10px;
+    }   
+    100%{
+        background-size: 720px 160px;
+    }
+}
+
+@keyframes anim {
+    0%{
+        perspective: 50px;
+    }
+    50%{
+        perspective: 10px;
+    }
+    100%{
+        perspective: 50px;
+    }
+}
+
+.sqares_tab1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 4em;
+    position: absolute;
+    width: 17%;
+    height: 17%;
+    background-color: #8b0000;
+    left: 25%;
+    top: 25%;
+    transform: translateZ(-400px); 
+    user-select: none;
+/*
+    animation: anim_polet;
+    animation-timing-function: linear;
+    animation-duration: 1s;  
+    animation-iteration-count: infinite;
+*/
+}
+.sqares_tab2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 4em;
+    position: absolute;
+    width: 16%;
+    height: 17%;
+    background-color: chartreuse;
+    left: 42%;
+    top: 25%;
+    transform: translateZ(-400px); 
+    user-select: none;
+/*
+    animation: anim_polet;
+    animation-timing-function: linear;
+    animation-duration: 1s;  
+    animation-iteration-count: infinite;
+*/
+}
+.sqares_tab3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 4em;
+    position: absolute;
+    width: 17%;
+    height: 17%;
+    background-color: coral;
+    left: 58%;
+    top: 25%;
+    transform: translateZ(-400px); 
+    user-select: none;
+/*
+    animation: anim_polet;
+    animation-timing-function: linear;
+    animation-duration: 1s;  
+    animation-iteration-count: infinite;
+*/
+}
+.sqares_tab4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 4em;
+    position: absolute;
+    width: 17%;
+    height: 16%;
+    background-color: darkcyan;
+    left: 25%;
+    top: 42%;
+    transform: translateZ(-400px); 
+    user-select: none;
+/*
+    animation: anim_polet;
+    animation-timing-function: linear;
+    animation-duration: 1s;  
+    animation-iteration-count: infinite;
+*/
+}
+.sqares_tab5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 4em;
+    position: absolute;
+    width: 16%;
+    height: 16%;
+    background-color: darkorange;
+    left: 42%;
+    top: 42%;
+    transform: translateZ(-400px); 
+    user-select: none;
+/*
+    animation: anim_polet;
+    animation-timing-function: linear;
+    animation-duration: 1s;  
+    animation-iteration-count: infinite;
+*/
+}
+.sqares_tab6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 4em;
+    position: absolute;
+    width: 17%;
+    height: 16%;
+    background-color: darkorchid;
+    left: 58%;
+    top: 42%;
+    transform: translateZ(50px); 
+    user-select: none;
+/*
+    animation: anim_polet;
+    animation-timing-function: linear;
+    animation-duration: 1s;  
+    animation-iteration-count: infinite;
+*/
+}
+.sqares_tab7{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 4em;
+    font-weight: bold;
+    position: absolute;
+    width: 17%;
+    height: 17%;
+    background-color: blueviolet;
+    left: 25%;
+    top: 58%;
+    transform: translateZ(-400px); 
+    user-select: none;
+/*
+    animation: anim_polet;
+    animation-timing-function: linear;
+    animation-duration: 1s;  
+    animation-iteration-count: infinite;
+*/
+}
+.sqares_tab8{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 4em;
+    font-weight: bold;
+    position: absolute;
+    width: 16%;
+    height: 17%;
+    background-color: dimgray;
+    left: 42%;
+    top: 58%;
+    transform: translateZ(-400px); 
+    user-select: none;
+/*
+    animation: anim_polet;
+    animation-timing-function: linear;
+    animation-duration: 1s;  
+    animation-iteration-count: infinite;
+*/
+}
+.sqares_tab9{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 4em;
+    font-weight: bold;
+    position: absolute;
+    width: 17%;
+    height: 17%;
+    background-color: deepskyblue;
+    left: 58%;
+    top: 58%;
+    transform: translateZ(-400px); 
+    user-select: none;
+/*
+    animation: anim_polet;
+    animation-timing-function: linear;
+    animation-duration: 1s;  
+    animation-iteration-count: infinite;
+*/
+}
+
+
+
+
+/*
+@keyframes anim_polet {
+    0%{
+        transform: translateZ(-400px); 
+    }   
+    100%{
+        transform: translateZ(55px);
+    }
+}
+*/
+
+
+
+.second_div1{
+    position: absolute;
+    left: 15%;
+    top: 13%;
+    width: 12%;
+    height: 25%;
+    background-color: black;
+    border: 3px solid white;
+    transition: background-color 0.5s, border-radius 0.5s;
+    animation: second_anim;
+    animation-timing-function: linear;
+    animation-duration: 4s;  
+    animation-iteration-count: infinite;
+}
+.second_div2{
+    position: absolute;
+    right:  15%;
+    top: 13%;
+    width: 12%;
+    height: 25%;
+    border-radius: 0px;
+    background-color: black;
+    border: 3px solid white;   
+    transition: background-color 0.5s, border-radius 0.5s;
+    animation: second_anim2;
+    animation-timing-function: linear;
+    animation-duration: 4s;  
+    animation-iteration-count: infinite;
+}
+.second_div3{
+    position: absolute;
+    right:  15%;
+    bottom: 13%;
+    width: 12%;
+    height: 25%;
+    border-radius: 0px;
+    background-color: black;
+    border: 3px solid white; 
+    transition: background-color 0.5s, border-radius 0.5s;
+    animation: second_anim2;
+    animation-timing-function: linear;
+    animation-duration: 4s;  
+    animation-iteration-count: infinite;
+}
+.second_div4{
+    position: absolute;
+    left:  15%;
+    bottom: 13%;
+    width: 12%;
+    height: 25%;
+    background-color: black;
+    border: 3px solid white;  
+    transition: background-color 0.5s, border-radius 0.5s;
+    animation: second_anim;
+    animation-timing-function: linear;
+    animation-duration: 4s;  
+    animation-iteration-count: infinite;
+    
+}
+
+.but1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left:  35%;
+    top: 41%;
+    width: 30%;
+    height: 8%;
+    background-color: black;
+    color: white;
+    border: 3px solid white;  
+    outline: none;
+    transition: background-color 0.5s;
+    text-decoration: none;
+}
+.but2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left:  35%;
+    top: 51%;
+    width: 30%;
+    height: 8%;
+    background-color: black;
+    color: white;
+    border: 3px solid white;  
+    outline: none;
+    transition: background-color 0.5s;
+    text-decoration: none;
+}
+
+.but1:hover~.second_div4{
+    background-color: white;
+}
+.but1:hover~.second_div3{
+    background-color: white;
+}
+.but1:hover~.second_div2{
+    background-color: white;
+}
+.but1:hover~.second_div1{
+    background-color: white;
+}
+
+.but2:hover~.second_div4{
+    border-radius: 160px;
+}
+.but2:hover~.second_div3{
+    border-radius: 160px;
+}
+.but2:hover~.second_div2{
+    border-radius: 160px;
+}
+.but2:hover~.second_div1{
+    border-radius: 160px;
+}
+
+.but1:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.but2:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+
+
+
+
+@keyframes second_anim {
+    0%{
+        transform: rotateZ(0deg); 
+    }   
+    100%{
+        transform: rotateZ(360deg); 
+    }
+}
+@keyframes second_anim2 {
+    0%{
+        transform: rotateZ(0deg); 
+    }   
+    100%{
+        transform: rotateZ(-360deg); 
+    }
+}
+
