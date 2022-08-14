@@ -3,6 +3,8 @@
 
 Компьютерная игра по уворачиванию или уничтожению летающих квадратов
 
+https://numberbox.github.io/Flying-Squares/
+
 Уничтожение используя клики мышью:
 
 ![image](https://user-images.githubusercontent.com/110388383/182174952-9e56c9ae-0118-4836-8bf8-80a554fc23f8.png)
